@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breguices pro Ju</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #fff0f5;
+      color: #4B0082;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: #ffe6f0;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px pink;
+    }
+
+    button {
+      background-color: hotpink;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: deeppink;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: hotpink;
+      animation: pisca 1s infinite;
+    }
+
+    @keyframes pisca {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Breguices pro Ju</h1>
+    <p id="frase">Clique no botão para receber uma breguice</p>
+    <button onclick="gerarFrase()">Gerar Breguice</button>
+  </div>
+
+  <footer>
+    Feito com amor e zero vergonha por Yasmin
+  </footer>
+
+  <script>
+    const frases = [
+      "Se amar fosse crime, você já teria prisão perpétua no meu coração.",
+      "Você não é Google, mas tem tudo que eu procuro.",
+      "Nosso amor é tipo Wi-Fi: invisível, mas conecta tudo.",
+      "Ju, cada batida do meu coração tem um 'Yasmin' gritando.",
+      "Você é a exceção de todas as minhas regras... e olha que eu sou toda certinha.",
+      "O universo pode ser grande, mas meu carinho por você é maior.",
+      "A cada frase brega, um pedacinho do meu amor vira poesia cafona.",
+      "Se ser brega é amar assim, então me chama de tapete de novela mexicana.",
+      "Se eu fosse programadora, você seria meu código-fonte favorito.",
+      "Ju, até as estrelas piscam com inveja do nosso brilho."
+    ];
+
+    function gerarFrase() {
+      const frase = frases[Math.floor(Math.random() * frases.length)];
+      document.getElementById("frase").textContent = frase;
+    }
+  </script>
+</body>
+</html>
